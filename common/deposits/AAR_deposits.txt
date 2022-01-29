@@ -1,0 +1,60 @@
+AAR_D_nature = {
+	is_for_colonizable = yes
+
+	category = deposit_cat_rare	
+	
+	planet_modifier = {
+		planet_max_districts_add = 3
+		district_generator_max = 3
+		district_mining_max = 3
+		district_farming_max = 3
+	}
+	triggered_planet_modifier = {#regular
+		potential = { exists = owner owner = { is_gestalt = no } }
+		trade_value_add = 2
+		planet_amenities_add = 2
+	}
+	triggered_planet_modifier = {#gestale
+		potential = { exists = owner owner = { is_gestalt = yes } }
+		planet_amenities_no_happiness_add = 3
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+AAR_D_nature_gestalt = {#z禁用
+	icon = AAR_D_nature
+	is_for_colonizable = yes
+
+	category = deposit_cat_rare	
+	
+	planet_modifier = {
+		planet_amenities_no_happiness_add = 3
+		planet_max_districts_add = 3
+		district_generator_max = 3
+		district_mining_max = 3
+		district_farming_max = 3
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+
+AAR_D_artificial = {
+	is_for_colonizable = yes
+
+	category = deposit_cat_rare
+
+	planet_modifier = {
+		planet_housing_add = 3
+		planet_max_districts_add = 6
+		planet_max_buildings_add = 1
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}

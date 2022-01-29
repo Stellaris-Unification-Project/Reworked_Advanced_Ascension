@@ -1,0 +1,18 @@
+namespace = eap_imperial_prerogative
+
+country_event = {
+	id = eap_imperial_prerogative.1
+	title = eip
+	desc = eip_desc
+	picture = GFX_evt_landing_ship
+	show_sound = event_activating_unknown_technology
+	location = root
+	is_triggered_only = yes
+
+	option = {	
+		name = eip_event.a
+	#	custom_tooltip = eip_tooltip
+	}
+}
+
+	

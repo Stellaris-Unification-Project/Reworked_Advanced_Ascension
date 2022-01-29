@@ -1,0 +1,91 @@
+namespace = eap_defender
+
+###	AAR触发天灾		参考[crisis_trigger.1]
+#_<AP天灾之主>
+country_event = {
+	id = eap_defender.1
+	title = eapdefender
+	desc = eapdefender_desc
+	picture = GFX_AAR_EP_crisis
+	show_sound = event_mystic_reveal_light
+	location = root
+	
+	is_triggered_only = yes
+
+	immediate = { 
+		set_global_flag = galactic_crisis_happened
+	}
+
+	# 虫群
+	option = {
+		name = defender1
+		trigger = { NOT = { has_global_flag = prethoryn_invasion_happened } }
+		hidden_effect = {
+			random_country = {
+				limit = { is_country_type = global_event } # global_event country is always around
+				country_event = { id = crisis.10	 days = 3100 random = 1000 }
+			}
+			country_event = { id = eap_defender.2 days = 30 }
+		}
+	}
+	# 恶魔
+	option = {
+		name = defender2
+		trigger = { NOT = { has_global_flag = extradimensional_invasion_happened } }
+		hidden_effect = {
+			random_country = {
+				limit = { is_country_type = global_event } # global_event country is always around
+				country_event = { id = crisis.1000	 days = 3100 random = 1000 }
+			}
+			country_event = { id = eap_defender.2 days = 30 }
+		}
+	}
+	# 肃正
+	option = {
+		name = defender3
+		trigger = { NOT = { has_global_flag = ai_invasion_happened } }
+		hidden_effect = {
+			random_country = {
+				limit = { is_country_type = global_event } # global_event country is always around
+				country_event = { id = crisis.2005	 days = 3100 random = 1000 }
+			}
+			country_event = { id = eap_defender.2 days = 30 }
+		}
+	}
+
+	# 无
+	option = {
+		name = AAR_opt_defender_no
+		trigger = {
+			has_global_flag = prethoryn_invasion_happened
+			has_global_flag = extradimensional_invasion_happened
+			has_global_flag = ai_invasion_happened
+		}
+		hidden_effect = {
+			country_event = { id = eap_defender.2 days = 30 }
+		}
+	}
+}
+
+country_event = {
+	id = eap_defender.2
+	title = eapdefender2
+	desc = eapdefender2_desc
+	picture = GFX_AAR_EP_cube
+	show_sound = event_mega_structure_other_empire_build_start
+	location = root
+	
+	is_triggered_only = yes
+
+	immediate = { 
+		owner = {
+			add_relic = "r_defender"
+		}
+	}
+	option = {
+		name = eapdefender2.a
+		custom_tooltip = eapdefender2.a.tooltip 
+	}
+}
+
+

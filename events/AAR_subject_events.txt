@@ -1,0 +1,89 @@
+namespace = AAR_evts_subject
+
+
+
+
+### 共同辉煌年检
+#_<AAR年检>
+country_event = {
+	id = AAR_evts_subject.1
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		# 附庸类型DB
+		if = {
+			limit = {
+				exists = overlord
+				overlord = { has_ascension_perk = eap_shared_destiny }
+				OR = {
+					is_subject_type = vassal
+					is_subject_type = protectorate
+				}
+			}
+			set_subject_of = { who = overlord		 subject_type = AAR_SBJ_vassal }
+		}
+		# 附庸mod_DB
+		remove_modifier = AAR_mod_cntr_vassal_support
+		if = { limit = { is_subject_type = AAR_SBJ_vassal }
+			add_modifier = { modifier = AAR_mod_cntr_vassal_support		 days = -1 }
+		}
+	}
+}
+
+
+
+
+### 铁血联盟年检
+#_<AAR年检>
+country_event = {
+	id = AAR_evts_subject.2
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		# 附庸类型DB
+		if = {
+			limit = {
+				exists = overlord
+				overlord = { has_ascension_perk = AAR_AP_ForcedUnion }
+				is_subject_type = tributary
+			}
+			set_subject_of = { who = overlord		 subject_type = AAR_SBJ_tributary }
+		}
+		# 附庸mod_DB
+		remove_modifier = AAR_mod_cntr_union_support
+		if = { limit = { is_subject_type = AAR_SBJ_tributary }
+			add_modifier = { modifier = AAR_mod_cntr_union_support		 days = -1 }
+		}
+	}
+}
+
+
+
+
+### 资本渗透年检
+#_<AAR年检>
+country_event = {
+	id = AAR_evts_subject.3
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		# 附庸类型DB
+		if = {
+			limit = {
+				exists = overlord
+				overlord = { has_ascension_perk = eap_universal_transactions }
+				is_subject_type = subsidiary
+			}
+			set_subject_of = { who = overlord		 subject_type = AAR_SBJ_subsidiary }
+		}
+		# 附庸mod_DB
+		remove_modifier = AAR_mod_cntr_corp
+		if = { limit = { is_subject_type = AAR_SBJ_subsidiary }
+			add_modifier = { modifier = AAR_mod_cntr_corp		 days = -1 }
+		}
+	}
+}
+

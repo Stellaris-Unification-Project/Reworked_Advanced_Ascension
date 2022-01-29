@@ -1,0 +1,237 @@
+namespace = force_event
+#	大建触发器/军备竞赛大建
+#	AAR造船
+
+#	ship_hull_add		军备竞赛=大建：强大的实验性武器/钢铁巨兽=护甲+船体+射程/未来战舰=护盾+护甲+船体+特殊buff
+
+
+
+
+###	大建触发器	---z禁用
+country_event = {
+	id = force_event.1
+	hide_window = yes
+
+	is_triggered_only = yes
+	
+	trigger = {
+		OR = {
+			has_ascension_perk = eap_galactic_force_projection
+		}
+	}
+	immediate = {
+		country_event = { id = force_event.2 }
+	#	country_event = { id = force_event.1 days = 3600 }	#自循环=10年
+	} 
+}
+
+
+### 军备竞赛大建
+#_<大建触发器/AAR五年>
+country_event = {
+	id = force_event.2
+	title = force_event.2.title
+	desc = force_event.2_desc
+	picture = GFX_AAR_EP_Navy_construction
+	show_sound = event_ship_thrusters
+	location = root.capital_scope.starbase
+
+	is_triggered_only = yes
+	
+	immediate = {
+		if = { limit = { is_ai = yes }
+			#舰容不够
+			if = { limit = { used_naval_capacity_percent > 1.1 }
+				add_resource = { alloys = 10000 }
+				add_resource = { influence = 100 }
+			}
+			#舰容足够
+			else = {
+				create_fleet = {
+					name = "NAME_AAR_FLEET"
+					effect = {
+						set_owner = root
+						random_list = {
+							2 = { AAR_prmt_eft_cntr_FLEET_build = { REPEAT = 4 } }	# AAR大建
+							3 = { AAR_prmt_eft_cntr_FLEET_build = { REPEAT = 5 } }
+							2 = { AAR_prmt_eft_cntr_FLEET_build = { REPEAT = 6 } }
+							1 = { AAR_prmt_eft_cntr_FLEET_build = { REPEAT = 7 } }	
+						}
+						# 放置在首都
+						set_location = {
+							target = root.capital_scope.starbase
+							distance = 5
+							angle = random
+						}
+						# 添加属性
+						every_owned_ship = {
+							## factor修正
+							AAR_prmt_eft_ship_var = { SIZE = battleship }	# AAR造船参数传递=战列舰
+							add_modifier = { modifier = AAR_mod_ship_FLEET_build_factor		 days = -1 multiplier = TEMP_var_factor }
+							clear_variable = TEMP_var_factor
+							
+							## 固定逃逸
+							add_modifier = { modifier = AAR_mod_ship_FLEET_build_common		 days = -1 }
+							
+							## 随机属性
+							AAR_prmt_eft_ship_CONSTRUCT_random_mod = { FACTOR = 2 }		# AAR随机舰船修正
+						}
+					}
+				}
+			}
+		}
+	}
+	# AI
+	option = {
+		trigger = { is_ai = yes }
+		name = OK
+	}
+	
+	
+	# PC
+	option = {
+		name = force_event.a
+		custom_tooltip = force_event.tooltip 
+		trigger = { is_ai = no }
+		hidden_effect = {
+			create_fleet = {
+				name = "NAME_AAR_FLEET"
+				effect = {
+					set_owner = root
+					random_list = {
+						2 = { AAR_prmt_eft_cntr_FLEET_build = { REPEAT = 3 } }	# AAR大建
+						3 = { AAR_prmt_eft_cntr_FLEET_build = { REPEAT = 4 } }
+						3 = { AAR_prmt_eft_cntr_FLEET_build = { REPEAT = 5 } }
+						2 = { AAR_prmt_eft_cntr_FLEET_build = { REPEAT = 6 } }
+						1 = { AAR_prmt_eft_cntr_FLEET_build = { REPEAT = 7 } }	
+					}
+					# 放置在首都
+					set_location = {
+						target = root.capital_scope.starbase
+						distance = 5
+						angle = random
+					}
+					# 添加属性
+					every_owned_ship = {
+						## factor修正
+						AAR_prmt_eft_ship_var = { SIZE = battleship }	# AAR造船参数传递=战列舰
+						add_modifier = { modifier = AAR_mod_ship_FLEET_build_factor		 days = -1 multiplier = TEMP_var_factor }
+						clear_variable = TEMP_var_factor
+						
+						## 固定逃逸
+						add_modifier = { modifier = AAR_mod_ship_FLEET_build_common		 days = -1 }
+						
+						## 随机属性
+						AAR_prmt_eft_ship_CONSTRUCT_random_mod = { FACTOR = 2 }		# AAR随机舰船修正
+					}
+				}
+			}
+		}
+	}
+	option = {	
+		name = force_event.b
+		custom_tooltip = force_event_b.tooltip 
+		trigger = { is_ai = no }
+		hidden_effect = { 
+			add_resource = { alloys = 10000 }
+			add_resource = { influence = 100 }
+		}
+	}
+}
+
+
+
+
+###	AAR造船
+#_<on_ship_built>
+ship_event = {
+	id = force_event.3
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		exists = owner
+		OR = {
+			is_ship_class = shipclass_starbase	# 主宰
+			is_ship_class = shipclass_military	# 普通
+			is_ship_class = shipclass_military_special	# 巨神兵
+		}
+	}
+
+	immediate = {
+		### 钢铁巨兽		血50%/甲50%/射程15%
+		if = { limit = { owner = { has_ascension_perk = AAR_fleet_armor } }
+			## factor修正
+			AAR_eft_ship_var = yes	# AAR造船参数传递
+			add_modifier = { modifier = AAR_mod_ship_FLEET_armor_factor		 days = -1 multiplier = TEMP_var_factor }
+			clear_variable = TEMP_var_factor
+			
+			## 固定射程
+			add_modifier = { modifier = AAR_mod_ship_FLEET_armor_common		 days = -1 }
+		}
+		
+		### 未来战舰		血15%/甲25%/盾25%+固定盾+5%逃逸+random特殊属性
+		else_if = { limit = { owner = { has_ascension_perk = AAR_fleet_shield } }
+			## factor修正
+			AAR_eft_ship_var = yes	# AAR造船参数传递
+			add_modifier = { modifier = AAR_mod_ship_FLEET_shield_factor	 days = -1 multiplier = TEMP_var_factor }
+			clear_variable = TEMP_var_factor
+			
+			## 固定护盾
+			if = {#小型
+				limit = {
+					OR = {
+						is_ship_size = corvette
+						is_ship_size = crisis_corvette
+					}
+				}
+				add_modifier = { modifier = AAR_mod_ship_FLEET_shield_small	 days = -1 }
+			}
+			else_if = {#中型
+				limit = {
+					OR = {
+						is_ship_size = destroyer
+						is_ship_size = cruiser
+						is_ship_size = small_ship_fallen_empire
+						is_ship_size = crisis_destroyer
+						is_ship_size = crisis_cruiser
+					}
+				}
+				add_modifier = { modifier = AAR_mod_ship_FLEET_shield_mid	 days = -1 }
+			}
+			else_if = {#大型
+				limit = {
+					OR = {
+						is_ship_size = battleship
+						is_ship_size = large_ship_fallen_empire
+					}
+				}
+				add_modifier = { modifier = AAR_mod_ship_FLEET_shield_large	 days = -1 }
+			}
+			else_if = {#巨型
+				limit = {
+					OR = {
+						is_ship_size = titan
+						is_ship_size = colossus
+						is_ship_size = massive_ship_fallen_empire
+					}
+				}
+				add_modifier = { modifier = AAR_mod_ship_FLEET_shield_ex	 days = -1 }
+			}
+			else_if = {#超兵
+				limit = {
+					OR = {
+						is_ship_size = juggernaut
+						is_ship_size = star_eater
+					}
+				}
+				add_modifier = { modifier = AAR_mod_ship_FLEET_shield_supreme	 days = -1 }
+			}
+			
+			## 随机属性
+			AAR_prmt_eft_ship_CONSTRUCT_random_mod = yes	# AAR随机舰船修正
+		}
+		
+	}
+}
+

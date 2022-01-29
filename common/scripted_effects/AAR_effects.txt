@@ -1,0 +1,145 @@
+#_[AAR舰队参数DB]
+#_[AAR造船参数传递]
+#_[AAR随机舰船修正]
+#_[AAR大建]
+
+
+
+
+###_[AAR舰队参数DB]
+#_<AAR年检		/舰队AP>
+#_|军备竞赛|	血50%/甲50%/盾50%/random特殊属性/25%逃逸
+#_|钢铁巨兽|	血50%/甲50%/射程15%
+#_|未来战舰|	血15%/甲25%/盾50%+固定/random特殊属性/5%逃逸
+AAR_eft_cntr_FLEET_var_DB = {
+	# vanilla
+	export_modifier_to_variable = { modifier = shipsize_corvette_hull_add				 variable = AAR_var_cntr_FLT_factor_corvette }
+	change_variable = { which = AAR_var_cntr_FLT_factor_corvette		 value = 300 }
+	export_modifier_to_variable = { modifier = shipsize_destroyer_hull_add				 variable = AAR_var_cntr_FLT_factor_destroyer }
+	change_variable = { which = AAR_var_cntr_FLT_factor_destroyer		 value = 800 }
+	export_modifier_to_variable = { modifier = shipsize_cruiser_hull_add				 variable = AAR_var_cntr_FLT_factor_cruiser }
+	change_variable = { which = AAR_var_cntr_FLT_factor_cruiser		 value = 1800 }
+	export_modifier_to_variable = { modifier = shipsize_battleship_hull_add				 variable = AAR_var_cntr_FLT_factor_battleship }
+	change_variable = { which = AAR_var_cntr_FLT_factor_battleship		 value = 3000 }
+	export_modifier_to_variable = { modifier = shipsize_titan_hull_add					 variable = AAR_var_cntr_FLT_factor_titan }
+	change_variable = { which = AAR_var_cntr_FLT_factor_titan		 value = 10000 }
+	export_modifier_to_variable = { modifier = shipsize_colossus_hull_add				 variable = AAR_var_cntr_FLT_factor_colossus }
+	change_variable = { which = AAR_var_cntr_FLT_factor_colossus		 value = 30000 }
+	export_modifier_to_variable = { modifier = shipsize_juggernaut_hull_add				 variable = AAR_var_cntr_FLT_factor_juggernaut }
+	change_variable = { which = AAR_var_cntr_FLT_factor_juggernaut		 value = 100000 }
+	
+	# fallen
+	export_modifier_to_variable = { modifier = shipsize_massive_ship_fallen_empire_hull_add			 variable = AAR_var_cntr_FLT_factor_massive_ship_fallen_empire }
+	change_variable = { which = AAR_var_cntr_FLT_factor_massive_ship_fallen_empire		 value = 10000 }
+	export_modifier_to_variable = { modifier = shipsize_large_ship_fallen_empire_hull_add			 variable = AAR_var_cntr_FLT_factor_large_ship_fallen_empire }
+	change_variable = { which = AAR_var_cntr_FLT_factor_large_ship_fallen_empire		 value = 3500 }
+	export_modifier_to_variable = { modifier = shipsize_small_ship_fallen_empire_hull_add			 variable = AAR_var_cntr_FLT_factor_small_ship_fallen_empire }
+	change_variable = { which = AAR_var_cntr_FLT_factor_small_ship_fallen_empire		 value = 1500 }
+	
+	# nemisis
+	export_modifier_to_variable = { modifier = shipsize_crisis_corvette_hull_add		 variable = AAR_var_cntr_FLT_factor_crisis_corvette }
+	change_variable = { which = AAR_var_cntr_FLT_factor_crisis_corvette		 value = 350 }
+	export_modifier_to_variable = { modifier = shipsize_crisis_destroyer_hull_add		 variable = AAR_var_cntr_FLT_factor_crisis_destroyer }
+	change_variable = { which = AAR_var_cntr_FLT_factor_crisis_destroyer		 value = 700 }
+	export_modifier_to_variable = { modifier = shipsize_crisis_cruiser_hull_add			 variable = AAR_var_cntr_FLT_factor_crisis_cruiser }
+	change_variable = { which = AAR_var_cntr_FLT_factor_crisis_cruiser		 value = 2000 }
+	export_modifier_to_variable = { modifier = shipsize_star_eater_hull_add				 variable = AAR_var_cntr_FLT_factor_star_eater }
+	change_variable = { which = AAR_var_cntr_FLT_factor_star_eater		 value = 150000 }
+}
+
+
+
+
+###_[AAR造船参数传递]
+#_<军备竞赛大建>
+#_prmt	SIZE
+#_var	|TEMP_var_factor|
+AAR_prmt_eft_ship_var = {
+	set_variable = { which = TEMP_var_factor value = owner.AAR_var_cntr_FLT_factor_$SIZE$ }
+}
+
+#_<AAR造船>
+AAR_eft_ship_var = {
+	# vanilla
+	if = { limit = { is_ship_size = corvette }
+		AAR_prmt_eft_ship_var = { SIZE = corvette }
+	}
+	else_if = { limit = { is_ship_size = destroyer }
+		AAR_prmt_eft_ship_var = { SIZE = destroyer }
+	}
+	else_if = { limit = { is_ship_size = cruiser }
+		AAR_prmt_eft_ship_var = { SIZE = cruiser }
+	}
+	else_if = { limit = { is_ship_size = battleship }
+		AAR_prmt_eft_ship_var = { SIZE = battleship }
+	}
+	else_if = { limit = { is_ship_size = titan }
+		AAR_prmt_eft_ship_var = { SIZE = titan }
+	}
+	else_if = { limit = { is_ship_size = colossus }
+		AAR_prmt_eft_ship_var = { SIZE = colossus }
+	}
+	else_if = { limit = { is_ship_size = juggernaut }
+		AAR_prmt_eft_ship_var = { SIZE = juggernaut }
+	}
+	# fallen
+	else_if = { limit = { is_ship_size = massive_ship_fallen_empire }
+		AAR_prmt_eft_ship_var = { SIZE = massive_ship_fallen_empire }
+	}
+	else_if = { limit = { is_ship_size = large_ship_fallen_empire }
+		AAR_prmt_eft_ship_var = { SIZE = large_ship_fallen_empire }
+	}
+	else_if = { limit = { is_ship_size = small_ship_fallen_empire }
+		AAR_prmt_eft_ship_var = { SIZE = small_ship_fallen_empire }
+	}
+	# nemisis
+	else_if = { limit = { is_ship_size = crisis_corvette }
+		AAR_prmt_eft_ship_var = { SIZE = crisis_corvette }
+	}
+	else_if = { limit = { is_ship_size = crisis_destroyer }
+		AAR_prmt_eft_ship_var = { SIZE = crisis_destroyer }
+	}
+	else_if = { limit = { is_ship_size = crisis_cruiser }
+		AAR_prmt_eft_ship_var = { SIZE = crisis_cruiser }
+	}
+	else_if = { limit = { is_ship_size = star_eater }
+		AAR_prmt_eft_ship_var = { SIZE = star_eater }
+	}
+}
+
+
+
+
+###_[AAR随机舰船修正]
+#_<军备竞赛大建/AAR造船>
+#_prmt	FACTOR
+AAR_prmt_eft_ship_CONSTRUCT_random_mod = {
+	random_list = {
+		1 = { add_modifier = { modifier = AAR_mod_ship_FLEET_random_mod_ATK			 days = -1 multiplier = $FACTOR|1$ } }
+		1 = { add_modifier = { modifier = AAR_mod_ship_FLEET_random_mod_RANGE		 days = -1 multiplier = $FACTOR|1$ } }
+		1 = { add_modifier = { modifier = AAR_mod_ship_FLEET_random_mod_EVADE		 days = -1 multiplier = $FACTOR|1$ } }
+		1 = { add_modifier = { modifier = AAR_mod_ship_FLEET_random_mod_HULL		 days = -1 multiplier = $FACTOR|1$ } }
+		1 = { add_modifier = { modifier = AAR_mod_ship_FLEET_random_mod_ARMOR		 days = -1 multiplier = $FACTOR|1$ } }
+		1 = { add_modifier = { modifier = AAR_mod_ship_FLEET_random_mod_SHIELD		 days = -1 multiplier = $FACTOR|1$ } }
+		1 = { add_modifier = { modifier = AAR_mod_ship_FLEET_random_mod_AIM			 days = -1 multiplier = $FACTOR|1$ } }
+		1 = { add_modifier = { modifier = AAR_mod_ship_FLEET_random_mod_WE			 days = -1 multiplier = $FACTOR|1$ } }
+		1 = { add_modifier = { modifier = AAR_mod_ship_FLEET_random_mod_WK			 days = -1 multiplier = $FACTOR|1$ } }
+		1 = { add_modifier = { modifier = AAR_mod_ship_FLEET_random_mod_WM			 days = -1 multiplier = $FACTOR|1$ } }
+	}
+}
+
+
+
+
+###_[AAR大建]
+#_<军备竞赛大建>
+#_prmt	REPEAT
+AAR_prmt_eft_cntr_FLEET_build = {
+	while = {
+		count = $REPEAT$
+		create_ship = {
+			name = "NAME_AAR_ship"
+			random_existing_design = battleship
+		}
+	}
+}

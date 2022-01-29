@@ -1,0 +1,45 @@
+@activation_cost = 150
+@triumph_duration = 3600
+
+r_defender = {
+	activation_duration = @triumph_duration
+	portrait = "GFX_relic_defender"
+	sound = "relic_activation_miniature_galaxy"
+
+	resources = {
+		category = relics
+		# Activation cost
+		cost = {
+			influence = @activation_cost
+		}
+	}
+	
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 1.5
+			is_materialist = yes
+		}
+	}
+
+	triggered_country_modifier = {
+		potential = { always = yes }
+		all_technology_research_speed = 0.05
+	}
+
+	score = 2000
+
+	active_effect = {
+		custom_tooltip = "AAR_tips_r_defender_effect"
+		add_modifier = { modifier = AAR_mod_cntr_defender		 days = @triumph_duration }		# CD
+		add_modifier = { modifier = AAR_mod_cntr_defender_MOD	 days = @triumph_duration }		# 对MOD天灾
+	}
+
+	# Possible check for activation
+	possible = {
+		custom_tooltip = {
+			fail_text = "AAR_tips_r_defender_activated"
+			NOT = { has_modifier = AAR_mod_cntr_defender }
+		}	
+	}
+}

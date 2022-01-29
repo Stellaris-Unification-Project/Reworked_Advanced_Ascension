@@ -1,0 +1,135 @@
+# 星球改造
+nnn_terraforming_candidate = {
+	icon = "gfx/interface/icons/planet_modifiers/AAR_pm_terraforming_GAIA.dds"
+	icon_frame = 1
+	important = yes			# if present on a planet, show the planet's nameplate
+}
+nnn_terraforming_candidate2 = {
+	icon = "gfx/interface/icons/planet_modifiers/AAR_pm_terraforming_HIVE.dds"
+	icon_frame = 1
+	important = yes			# if present on a planet, show the planet's nameplate
+}
+
+
+
+
+AAR_mod_cntr_defender = {
+	icon = GFX_AAR_mod_cntr
+	# vanilla
+	all_technology_research_speed = 0.15
+	country_produces_mult  = -0.15	# 运维
+	damage_vs_country_type_default = 0.1
+	damage_vs_country_type_fallen_empire = 0.1
+	damage_vs_country_type_awakened_fallen_empire = 0.1
+}
+
+AAR_mod_cntr_defender_MOD = {
+	icon = GFX_AAR_mod_cntr
+	hide_from_country_list = yes
+	
+	# mod
+	damage_vs_country_type_ascended_empire = 0.1	# zofe
+	damage_vs_country_type_lost_empire = 0.1
+	damage_vs_country_type_mem_vazurans = 0.15		# mem
+	damage_vs_country_type_fallen_empire_ev = 0.15	# ev
+	damage_vs_country_type_kuat_fallen_empire = 0.25	# 阿夸
+	damage_vs_country_type_kuat_awakened_fallen_empire = 0.25
+	damage_vs_country_type_awakened_return_kuat_empire = 0.25
+	damage_vs_country_type_kuat_fire_base_hositle = 0.25
+	damage_vs_country_type_kuat_fleet = 0.5
+	damage_vs_country_type_ag_kuat_invasion_country = 0.75
+	damage_vs_country_type_ag_ancient_gamma_guardian = 0.5	# 古代
+	damage_vs_country_type_ag_ancient_primitive_crisis = 0.5
+	damage_vs_country_type_ag_ancient_epsilon_guardian = 0.5
+	damage_vs_country_type_ag_zeta_crisis_country = 0.5
+	damage_vs_country_type_human_fallen_empire = 0.15	# hfe
+	damage_vs_country_type_sofe_light_seeker = 1.0	# acot
+	damage_vs_country_type_original_empire = 1.0
+	damage_vs_country_type_original_empire_passive = 0.75
+	damage_vs_country_type_original_empire_active = 0.75
+	damage_vs_country_type_acot_crazed_stellarite = 0.5
+	damage_vs_country_type_sofe_sentinel_active = 0.25
+	damage_vs_country_type_eternal_empire = 1.0		# EE
+	damage_vs_country_type_bwm_ragnarok_guardian = 0.35		# lex
+	damage_vs_country_type_bwm_grave_guardian = 0.35
+	damage_vs_country_type_bwm_conduit_guardian = 0.35
+	damage_vs_country_type_bwm_ancestor_guardian = 0.35
+	damage_vs_country_type_guardian_wg_think_tank = 0.25	# wsg
+	damage_vs_country_type_wg_crisis_country = 0.75
+	damage_vs_country_type_afk_crisis_country = 0.5	# swg
+	damage_vs_country_type_compound_empire = 1.0	# Giga
+	damage_vs_country_type_void_lifeforms_1 = 0.5
+	damage_vs_country_type_void_lifeforms_2 = 0.5
+	damage_vs_country_type_katzenartig_imperium = 1.0
+}
+
+
+
+
+eap_galactic_contender = {
+	icon = GFX_AAR_mod_cntr
+	planet_jobs_produces_mult  = 0.5
+	all_technology_research_speed = 0.5
+}
+
+
+
+
+# 宗主国扶持
+AAR_mod_cntr_vassal_support = {
+	icon = GFX_AAR_mod_cntr
+	country_produces_mult  = 0.50
+}
+# 中央扶持
+AAR_mod_cntr_union_support = {
+	icon = GFX_AAR_mod_cntr
+	country_produces_mult  = 0.35
+}
+
+
+# 总公司投资
+AAR_mod_cntr_corp = {	
+	icon = GFX_AAR_mod_cntr
+ 	pop_happiness = 0.25
+	planet_jobs_produces_mult  = 0.50
+}
+
+
+decision_eapmastery_of_nature = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_eap_mastery_of_nature.dds"
+	icon_frame = 1
+	planet_max_districts_add = 8
+}
+
+decision_eapmastery_of_nature2 = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_eap_mastery_of_nature2.dds"
+	icon_frame = 1
+	planet_max_districts_add = 8
+}
+
+
+
+
+# 永无止境
+AAR_mod_plnt_nzt48 = {
+	icon = "gfx/interface/icons/planet_modifiers/AAR_mod_plnt_nzt48.dds"
+	icon_frame = 1
+	biological_pop_happiness = 0.3
+	planet_jobs_physics_research_produces_mult = 0.25
+	planet_jobs_society_research_produces_mult = 0.25
+	planet_jobs_engineering_research_produces_mult = 0.25
+	pop_government_ethic_attraction = -0.3
+}
+
+
+
+
+trade_protection = {
+	icon = GFX_AAR_mod_cntr
+	local_trade_protection_add = 5
+}
+
+eap_imperial_prerogative1 = {
+	icon = GFX_AAR_mod_cntr
+	country_admin_cap_add = 50
+}

@@ -1,0 +1,157 @@
+#	特殊属性	/军备竞赛/钢铁巨兽/科技舰队
+#	威压主义
+#	飞升起源
+
+
+
+
+# 特殊属性
+AAR_mod_ship_FLEET_random_mod_ATK = {
+	ship_weapon_damage = 0.15
+}
+AAR_mod_ship_FLEET_random_mod_RANGE = {
+	weapon_type_point_defense_weapon_damage_mult = 0.25
+	ship_weapon_range_mult = 0.15
+}
+AAR_mod_ship_FLEET_random_mod_EVADE = {
+	ship_evasion_add = 5
+	ship_evasion_mult = 0.15
+}
+AAR_mod_ship_FLEET_random_mod_HULL = {
+	ship_hull_add = 100
+	ship_hull_mult = 0.15
+}
+AAR_mod_ship_FLEET_random_mod_ARMOR = {
+	ship_armor_add = 100
+	ship_armor_mult = 0.15
+}
+AAR_mod_ship_FLEET_random_mod_SHIELD = {
+	ship_shield_add = 100
+	ship_shield_mult = 0.15
+}
+AAR_mod_ship_FLEET_random_mod_AIM = {
+	ship_accuracy_add = 5
+	ship_accuracy_mult = 0.1
+	ship_tracking_add = 5
+	ship_tracking_mult = 0.05
+}
+AAR_mod_ship_FLEET_random_mod_WE = {
+	weapon_type_energy_weapon_damage_mult = 0.25
+}
+AAR_mod_ship_FLEET_random_mod_WK = {
+	weapon_type_kinetic_weapon_damage_mult = 0.25
+}
+AAR_mod_ship_FLEET_random_mod_WM = {
+	weapon_type_explosive_weapon_damage_mult = 0.25
+	weapon_type_strike_craft_weapon_damage_mult = 0.25
+}
+
+
+###	军备竞赛	血50%/甲50%/盾50%/random特殊属性/25%逃逸
+AAR_mod_ship_FLEET_build_factor = {
+	ship_hull_add = 0.5
+	ship_armor_add = 0.5
+	ship_shield_add = 0.5
+}
+# 固定逃逸
+AAR_mod_ship_FLEET_build_common = {
+	ship_disengage_chance_mult = 0.20
+}
+
+
+###	钢铁巨兽
+AAR_mod_ship_FLEET_armor_factor = {
+	ship_hull_add = 0.5
+	ship_armor_add = 0.5
+}
+AAR_mod_ship_FLEET_armor_common = {
+	ship_weapon_damage = 0.1
+	ship_weapon_range_mult = 0.1
+}
+
+
+###	科技舰队
+AAR_mod_ship_FLEET_shield_factor = {
+	ship_hull_add = 0.15
+	ship_armor_add = 0.25
+	ship_shield_add = 0.25
+}
+# 固定护盾
+AAR_mod_ship_FLEET_shield_small = {
+	ship_shield_add = 400
+	ship_disengage_chance_mult = 0.05
+}
+AAR_mod_ship_FLEET_shield_mid = {
+	ship_shield_add = 1000
+	ship_disengage_chance_mult = 0.05
+}
+AAR_mod_ship_FLEET_shield_large = {
+	ship_shield_add = 2000
+	ship_disengage_chance_mult = 0.05
+}
+AAR_mod_ship_FLEET_shield_ex = {
+	ship_shield_add = 8000
+	ship_disengage_chance_mult = 0.05
+}
+AAR_mod_ship_FLEET_shield_supreme = {
+	ship_shield_add = 75000
+	ship_disengage_chance_mult = 0.05
+}
+
+
+
+
+###	威压主义	###################################
+# own	1~10=20~180
+AAR_pm_dominion_FEAR_own = {
+	icon = "gfx/interface/icons/planet_modifiers/AAR_pm_dominion_FEAR_own.dds"
+	icon_frame = 1
+	
+	planet_stability_add = 2
+	planet_crime_add = -5
+	job_criminal_add = -1	# 清理犯罪岗位
+	planet_jobs_unity_produces_mult = 0.015
+	planet_jobs_produces_mult = 0.015
+	pop_happiness = -0.025
+	
+	pop_government_ethic_attraction = 0.04
+}
+AAR_pm_dominion_FEAR_own_gestalt = {
+	icon = "gfx/interface/icons/planet_modifiers/AAR_pm_dominion_FEAR_own.dds"
+	icon_frame = 1
+	
+	planet_stability_add = 2
+	planet_crime_no_happiness_add = -5
+	job_deviant_drone_add = -1	# 清理犯罪岗位
+	job_corrupt_drone_add = -1	# 清理犯罪岗位
+}
+# enermy	1~10
+AAR_pm_dominion_FEAR_enemy = {
+	icon = "gfx/interface/icons/planet_modifiers/AAR_pm_dominion_FEAR_enemy.dds"
+	icon_frame = 1
+	
+	planet_stability_add = -2
+	planet_jobs_produces_mult = -0.015
+	pop_happiness = -0.025
+	
+	pop_government_ethic_attraction = -0.025
+	pop_growth_from_immigration = -0.03
+}
+AAR_pm_dominion_FEAR_enemy_gestalt = {
+	icon = "gfx/interface/icons/planet_modifiers/AAR_pm_dominion_FEAR_enemy.dds"
+	icon_frame = 1
+	
+	planet_stability_add = -2
+	planet_crime_no_happiness_add = -2.5
+}
+
+
+
+
+###	飞升起源	###################################
+AAR_mod_cntr_origin_ascended = {
+	icon = GFX_AAR_mod_cntr
+	hide_from_country_list = yes
+	
+	ascension_perks_add = 1
+}

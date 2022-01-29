@@ -1,0 +1,80 @@
+
+
+on_game_start = {
+	events = {
+		AAR_core_evt.0			# AAR开局	=AAR飞升起源/
+	}
+}
+
+
+
+
+on_policy_changed = {
+	events = {
+		nnnethic_event.3
+	}
+}
+
+on_tech_increased = {
+	events = {
+	}
+}
+
+
+
+
+on_monthly_pulse_country = {
+	events = {
+	#	eap_imperial_prerogative.1
+	}
+}
+
+on_yearly_pulse = {
+	events = {
+		AAR_core_evt.1		#	AAR年检		=AAR舰队参数DB/意志统一触发器	/共同辉煌年检
+	}
+}
+
+# No scope, like on_game_start
+on_five_year_pulse = {
+	events = {
+		AAR_core_evt.2		#	AAR五年
+	}
+}
+
+
+
+
+# A ship has been built
+# Root = Ship
+# From = Planet
+on_ship_built = {
+	events = {
+		force_event.3		#	AAR造船
+	}
+}
+
+# This = owner of fleet 1
+# From = owner of fleet 2
+# FromFrom = fleet 1
+# FromFromFrom = fleet 2
+on_entering_battle = {
+	events = {
+	}
+}
+
+# A fleet has entered a system
+# Scope = Fleet
+# From = System
+on_entering_system_fleet = {
+	events = {
+	}
+}
+
+#From = Planet/Starbase/Megastructure scope
+#This = Fleet scope
+on_fleet_enter_orbit = {
+	events = {
+		AAR_core_evt.3		#	AAR进入轨道
+	}
+}

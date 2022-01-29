@@ -1,0 +1,338 @@
+﻿l_russian:
+#   MISC    /星球改造    /舰队AP/造物之神/星际霸权/技术奇点/意志统一/权力之巅/    AP共同辉煌/资本渗透    /自然和谐/天灾之主/极效政府/永无止境
+
+
+
+### MISC
+ nnn_tech_repeatable_ascension_perks:0 "Повторяющееся соверешнество" 
+ nnn_tech_repeatable_ascension_perks_desc:0 "Время это бесконечный цикл. Все что мы сделали или сделаем, мы сделаем снова и снова и снова. Цикл непрерывен."
+ 
+ # 起源
+ AAR_origin_ascended:0 "Outstanding Insights"
+ AAR_origin_ascended_desc:0 "The moment before stepping into the universe, this civilization has completed its ascension, and it will be destined to be extraordinary."
+ AAR_tips_origin_ascended:0 "You start the game with §Y1§! §HAvailable Ascended Slots§!, and §Y200§!£unity£§E$unity$§! each year for 5 years thereafter."
+ AAR_mod_cntr_origin_ascended:0 ""
+ AAR_mod_cntr_origin_ascended_desc:0 ""
+
+
+
+
+# Perks
+
+ eap_world_shaper:0 "Мастера в изменении планет"
+ eap_world_shaper_desc:0 "Изменение экосистемы планет это лишь небольшая работенка для нас."
+
+ eap_hive_worlds:0 "Бесконечный улей"
+ eap_hive_worlds_desc:0 "Мы легко превратим обитаемые планеты в миры ульи и даже обратим внимание на некоторые бесплодные планеты со скрытым потенциалом, дабы наделить их жизнью."
+
+
+
+
+###_[舰队AP]
+ eap_galactic_force_projection:0 "Гонка вооружений"
+ eap_galactic_force_projection_desc:0 "Нам нужно больше, больше флотилий, чтоб быть увереными в завтрашнем дне."
+ nnn_galactic_force_projection_desc:0 "Large-scale construction, every §G5§! years to obtain §G3~7§! prototype battleships incorporating the latest military technology, they have better attributes than normal battleships."
+ force_event.2.title:0 "Корабли построены"
+ force_event.2_desc:1 "Large-scale construction, completing established tasks while constructing some new $battleship$ equipped with newest technology."
+ force_event.a:0 "It's time to draw!"
+ force_event.tooltip:1 "Получено §G3~7§! Линкоров"
+ force_event.b:0 "Продайте дополнительные корабли охранным компаниям. Наши торговые маршруты должны быть в безопасности."
+ force_event_b.tooltip:1 "Вы получите §G10000§! !£alloys£ §M$alloys$§!, get §G100§!£influence£§P$influence$§!"
+# mod
+ mod_shipsize_titan_build_speed_mult:0 "$titan$ Build Speed"
+ mod_ship_titan_cost_mult:0 "$titan$ Build Cost"
+ mod_shipsize_colossus_build_speed_mult:0 "$colossus$ Build Speed"
+ mod_ship_colossus_cost_mult:0 "$colossus$ Build Cost"
+ mod_shipsize_juggernaut_build_speed_mult:0 "$juggernaut$ Build Speed"
+ mod_ship_juggernaut_cost_mult:0 "$juggernaut$ Build Cost"
+ mod_shipsize_crisis_corvette_build_speed_mult:0 "$crisis_corvette$Build Speed"
+ mod_shipsize_crisis_destroyer_build_speed_mult:0 "$crisis_destroyer$Build Speed"
+ mod_shipsize_crisis_cruiser_build_speed_mult:0 "$crisis_cruiser$Build Speed"
+ mod_shipsize_star_eater_build_speed_mult:0 "$star_eater$ Build Speed"
+
+ AAR_fleet_armor:0 "Iron Kraken"
+ AAR_fleet_armor_desc:0 "Heavier, stronger, more violent. The miracle of military industry, the super alloy Kraken."
+ AAR_fleet_armor_tips:0 "Double hull, each newly launched warship will receive a large amount of additional hull and armor. Power core, all warships weapon damage and range increased by 10%."
+ AAR_fleet_shield:0 "Future Warship"
+ AAR_fleet_shield_desc:0 "Each warship is the result of our most advanced technology, even if it makes them more expensive."
+ AAR_fleet_shield_tips:0 "High-tech equipment, each newly launched warship will gain additional hull and armor, and has its own shield generator. Also each warship is unique, they will gain additional random attributes, but This will also increase the cost of all military warships by 5%."
+
+
+
+
+ eap_master_builders:0 "Демиург"
+ eap_master_builders_desc:0 "За несколько надменное отношение к примитивным цивилизациям нас назвали бы демиургами.. И это не было бы ошибкой."
+
+
+
+
+# 星际霸权
+ eap_interstellar_dominion:0 "Галактическая гегемония"
+ eap_interstellar_dominion_desc:0 "Наше место среди высших. Наша территория огромна."
+
+ AAR_AP_dominion_FEAR:0 "Dominionism"
+ AAR_AP_dominion_FEAR_desc:0 "Justice is within range of gun. Fear is the best tool, and reverence brings harmony."
+ AAR_tips_dominion_FEAR:0 "Fleet is the foundation of a nation, and what other civilizations think of us is closely related to our §HNaval Strength§!:\nWhen we are stronger than them, they will learn to fear and become more respectful of us.\nWhen We are weaker than them, and they will see us as a threat and become even more hostile to us.\n\nIn addition, any of our §Hsufficiently large§! fleets (size 30+) will Let the inhabitants of the planet feel oppressed and have an impact on the planet.\nIf it is our own or a vassal planet, crime will be eliminated, society will be more stable, and ideas will be more unified.\nIf it is an enemy planet , then the society will be unstable and the trend of thought will become chaotic. §HBut be careful, this will deepen the hostility of the other side.§!"
+ AAR_pm_dominion_FEAR_own:0 "Dominion from the Sky"
+ AAR_pm_dominion_FEAR_own_desc:0 "This colony is enveloped by a huge fleet, the local residents feel the majesty of the empire, and the social atmosphere becomes more orderly and oppressive.\n§HThe larger the fleet in orbit, the more pronounced the effect.§!"
+ AAR_pm_dominion_FEAR_own_gestalt:0 "$AAR_pm_dominion_FEAR_own$"
+ AAR_pm_dominion_FEAR_own_gestalt_desc:0 "The colony is overwhelmed by a large fleet, and the local anomalous units feel fearful and become inactive.\n§HThe larger the fleet in orbit, the more pronounced the effect.§!"
+ AAR_pm_dominion_FEAR_enemy:0 "$AAR_pm_dominion_FEAR_own$"
+ AAR_pm_dominion_FEAR_enemy_desc:0 "The colony is enveloped by a huge fleet, the local residents feel fearful, and the social atmosphere becomes more chaotic and oppressive.\n§HThe larger the fleet in orbit, the more pronounced the effect.§!"
+ AAR_pm_dominion_FEAR_enemy_gestalt:0 "$AAR_pm_dominion_FEAR_own$"
+ AAR_pm_dominion_FEAR_enemy_gestalt_desc:0 "The colony is enveloped by a large fleet, and the local anomalous units are excited and become more active.\n§HThe larger the fleet in orbit, the more pronounced the effect.§!"
+ AAR_triggered_opinion_dominion_FEAR_powerful:0 "Awesome Fleet"
+ AAR_triggered_opinion_dominion_FEAR_weak:0 "Potential Naval Threat"
+ AAR_opinion_dominion_FEAR_enemy:0 "Terrorize our colony"
+
+
+
+
+ eap_technological_ascendancy:0 "Технологическая сингулярность" 
+ eap_technological_ascendancy_desc:0 "Технологическая сингулярность была накоплена в соответствии с историей наших взглядов технологического развития и в будущем неизбежно будут происходить технологические прорывы."
+ deseap_technological_ascendancy_desc:0 "Каждые §G3§! года созывается Саммит Технологий Будущего"
+ eap_one_vision:0 "Абсолютная уверенность"
+ eap_one_vision_desc:0 "Мы полностью поддерживаем каждое правительственное решение; Мы полностью следуем указам нашего правительства."
+ 
+ eap_imperial_prerogative:0 "Испольнительная прерогатива"
+ eap_imperial_prerogative_desc:0 "После чреды глубоких реформ у нашего правительства крайне улучшилась способность контроля над мирами империи."
+ eap_imperial_prerogative_corp:0 "Испольнительная прерогатива"
+ eap_imperial_prerogative_corp_desc:0 "После чреды глубоких реформ у нашего правительства крайне улучшилась способность контроля над мирами империи."
+ eap_imperial_prerogative_corp2:0 "Испольнительная прерогатива"
+ eap_imperial_prerogative_corp2_desc:0 "После чреды глубоких реформ у нашего правительства крайне улучшилась способность контроля над мирами империи."
+ eap_imperial_prerogative1:0 "Испольнительная прерогатива"
+
+
+
+
+ eap_shared_destiny:0 "Общие ценности" 
+ eap_shared_destiny_desc:0 "Тех, кто лоялен нам - ведет дорога к светлому будущему." 
+ deseap_shared_destiny_desc:0 "£opinion §YОтношение§! подданных будет увеличено на §G+200§!" 
+ describe_shared_destiny:0 "§EСпустя некоторое время вассалы и данники будут становиться младшими партнёрами.\nОни ограничены в дипломатии и воюют вместе с сюзереном.\nОни платят §Y25%§! от количества их ежемесячного притока исследований, энергии и минералов своему сюзерену.\nТакже они поддерживаются своим сюзереном — их приток энергии и минералов увеличен на §!§Y100%§!§E. \nПрекратив партнёрство с сюзереном, они потеряют увеличенный приток ресурсов спустя некоторое время.§!"            
+ triggered_opinion_eap_shared_destiny:0 "Общие ценности"
+ AAR_mod_cntr_vassal_support :0 "Поддержка от сюзерена"
+ AAR_mod_cntr_vassal_support_COMMON:0 "$AAR_mod_cntr_vassal_support$"
+ SUBJECT_AAR_SBJ_vassal:0 "Младший партнёр"
+ SUBJECT_DESC_AAR_SBJ_vassal:0 "§EСпустя некоторое время вассалы и данники будут становиться младшими партнёрами.\nОни ограничены в дипломатии и воюют вместе с сюзереном.\nОни платят §Y25%§! от количества их ежемесячного притока исследований, энергии и минералов своему сюзерену.\nТакже они поддерживаются своим сюзереном — их приток энергии и минералов увеличен на §!§Y100%§!§E. \nПрекратив партнёрство с сюзереном, они потеряют увеличенный приток ресурсов спустя некоторое время.§!"
+
+
+
+
+### AP共同辉煌 eap_shared_destiny:0 "Общие ценности" 
+ eap_shared_destiny_desc:0 "Тех, кто лоялен нам - ведет дорога к светлому будущему." 
+ deseap_shared_destiny_desc:0 "£opinion §YОтношение§! подданных будет увеличено на §G+400§!" 
+ describe_shared_destiny:0 "§EThe vassal will be promoted to $SUBJECT_AAR_SBJ_vassal$ after a period of time.\n\n$SUBJECT_DESC_AAR_SBJ_vassal$§!"
+ triggered_opinion_eap_shared_destiny:0 "Общие ценности"
+ AAR_mod_cntr_vassal_support :0 "Поддержка от сюзерена"
+ AAR_mod_cntr_vassal_support_COMMON:0 "$AAR_mod_cntr_vassal_support$"
+ SUBJECT_AAR_SBJ_vassal:0 "Младший партнёр"
+ SUBJECT_DESC_AAR_SBJ_vassal:0 "Union is an advanced form of vassal.\nThey have limited diplomatic power and must fight alongside their overlord.\nRequires §Y25%§! monthly research, £energy£ §Y$energy$§ ! and £minerals£ §R$minerals$§! and 15% of £alloys£ §M$alloys$§! income as tribute.\nThey are supported by overlord's industries: $mod_country_produces_mult$ increases §!§G50%§! .\nAfter the vassal is released, the bonus effect will disappear after a period of time."
+
+ AAR_AP_ForcedUnion:0 "Forced Union"
+ AAR_AP_ForcedUnion_desc:0 "Under the leadership of a unified mind, we will emerge from oppression and achieve common prosperity."
+ AAR_tips_ForcedUnion:0 "Vassal £opinion §YEvaluation§! Increases §G+200§!\n§ETributary Union is raised to $SUBJECT_AAR_SBJ_tributary$ after a period of time.\n\n$SUBJECT_DESC_AAR_SBJ_tributary$§!"
+ triggered_opinion_AAR_ForcedUnion:0 "Believe in the Central"
+ AAR_mod_cntr_union_support:0 "Central Support"
+ SUBJECT_AAR_SBJ_tributary:0 "Affiliate"
+ SUBJECT_DESC_AAR_SBJ_tributary:0 "Affiliation is an advanced form of tributary, although they have a high degree of autonomy and can expand and engage in diplomatic activities at will.\nBut must be accountable to the Central Empire and fight alongside it.\nRequires surrender §Y15% §! monthly research, £energy£§Y$energy$§!, £minerals£§R$minerals$§!, £alloys£ §M$alloys$§! and premium resource income to complete production tasks.\nThey Industry support from the central government: $mod_country_produces_mult$ increases §!§G35%§!.\nAfter the vassal is removed, the bonus effect will disappear after a period of time."
+
+
+
+
+ eap_universal_transactions:0 "Всепроникающий капитализм"
+ eap_universal_transactions_desc:0 "Мы продолжаем инвестировать и облагать кредитами империи галактики для получения более высоких прибылей, постепенно начиная контролировать их жизненный путь и даже влияя на принятие решений некоторыми высокопоставленными чиновниками."
+ describe_universal_transactions_desc:0 "£opinion §YОтношение§! подданных будет увеличено на §G+200§!"
+ describe_universal_transactions:0 "§EСпустя некоторое время вассалы и данники будут становиться младшими партнёрами.\nОни ограничены в дипломатии и воюют вместе с сюзереном.\nОни платят §Y25%§! от количества их ежемесячного притока исследований, энергии и минералов своему сюзерену.\nТакже они поддерживаются своим сюзереном — их приток энергии и минералов увеличен на §!§Y100%§!§E. \nПрекратив партнёрство с сюзереном, они потеряют увеличенный приток ресурсов спустя некоторое время.§!"
+ triggered_opinion_eap_universal_transactions:0 "Всепроникающий капитализм"
+ AAR_mod_cntr_corp:0 "Поддержка от родительской компании"
+ SUBJECT_AAR_SBJ_subsidiary:0 "Младший партнёр"
+ SUBJECT_DESC_AAR_SBJ_subsidiary:0 "§EСпустя некоторое время вассалы и данники будут становиться младшими партнёрами.\nОни ограничены в дипломатии и воюют вместе с сюзереном.\nОни платят §Y25%§! от количества их ежемесячного притока исследований, энергии и минералов своему сюзерену.\nТакже они поддерживаются своим сюзереном — их приток энергии и минералов увеличен на §!§Y100%§!§E. \nПрекратив партнёрство с сюзереном, они потеряют увеличенный приток ресурсов спустя некоторое время.§!"
+ 
+ eap_mastery_of_nature:0 "Гармония с природой"
+ eap_mastery_of_nature_desc:0 "Мы изменили наши способы трансформации окружающей среды, и следуя законам природы - мы научились гармоничному симбозу между нами и природой."
+ eap_mastery_of_nature_unlocks:1 "Открывает все технологии £society  §Yочищения клеток§!."
+ allow_edict_land_clearance_perfection:0 "§HОткрывает планетарный указ:§! Идеальное очищение земли" 
+ 
+ describe_edict_land_clearance_perfection:1 "§EЭто решение навсегда увеличивает максимально число районов планеты на §Y8§!. Такое можно проделать с каждой планетой только один раз.§!"
+
+ decision_eapmastery_of_nature:0 "Природа и гармония" 
+ decision_eapmastery_of_nature_desc:0 "Мы живем в гармонии с природой, почти в идеальном симбиозе." 
+ d_AA:0 "Дар природы"
+ d_AA_desc:0 "Эта планета является крайне устойчивым миром, в плане экосистемы."
+
+ eap_mastery_of_nature2:0 "Покорение природы" 
+ eap_mastery_of_nature2_desc:0 "Наших накопленных знаний и опыта достаточно, а потому - все факторы окружающей среды которые могут помешать нашей экспансии будут без проблем уничтожены. Вся земля, вся природа - открыты для нас! Мы — покорители природы!§!"
+ eap_mastery_of_nature2_unlocks:1 "Открывает все технологии £society  §Yочищения клеток§!."
+ allow_edict_land_clearance_perfection2:0 "§HОткрывает планетарный указ:§! Покорение природы"
+ decision_eapmastery_of_nature2:0 "Идеальное очищение земли"
+ decision_eapmastery_of_nature2_desc:0 "Мы окончательно покорили природу." 
+ d_BB:0 "Переместить гору и заполнить моря.. Разве это сложно для нас?"
+ d_BB_desc:0 "Стройте и развивайте каждый дюйм данного пространства!"
+ 
+ deseap_one_vision_desc:0 "§HОткрывает политику: §!Абсолютная уверенность\nПозволяет нам открывать различные направления пропаганды с помощью преображений политики"
+
+  
+ eap_defender_of_the_galaxy:0 "Стражи Галактики"
+ eap_defender_of_the_galaxy_desc:0 "Наши исследования космического пространства обнаружили носитель полный множества загадочных и очень старинных паттернов на небольшой бесплодной планете. После предварительного изучения носителя мы обнаружили, что он хорошо защищен и его полное исследование займёт не мало времени. Однако, если выделить общую информация на нем, то там говорится о возможной катастрофе, которая грозит нашей галактике, а так же информацию о подготовке к ней. \n\nТак давайте же не позволим галактике кануть в лету!"
+ eap_defender_of_the_galaxy_modifier_desc:0 "Урон кризисным фракциям в конце игры: §G+50%§!\nПроизводство ресурсов: §G+50%§!"
+ eap_defender_of_the_galaxy_effect_opinion:0 "£opinion §YОтношение§! всех империй увеличено на §G+80§!"
+ AAR_mod_cntr_defender:0 "Ящик Пандоры"
+ AAR_mod_cntr_defender_desc:0 "要战胜恶龙，必先成为恶龙。"
+ AAR_mod_cntr_defender_MOD:0 "$AAR_mod_cntr_defender$"
+ eap_defender_of_the_galaxy_effect:0 "§RПредупреждение! Взятие этого перка вызовет кризис конца игры!§!"
+ triggered_opinion_eap_defender_of_the_galaxy:0 "Стражи Галактики"
+ 
+ eap_executive_vigor:0 "Эффективное исполнение"
+ eap_executive_vigor_desc:0 "Указы нашего правительства будут исполнены с максимальной педантичностью и как можно скорее."
+
+ eap_transcendent_learning:0 "Бесконечность"
+ eap_transcendent_learning_desc:0 "Мы разработали чудесный реагент: РЭО-48. Он многократно улучшает мыслительные возможности у тех, кто ищет новых знаний. В то же время получение новых знаний вызывает сильную эйфорию. К тому же, этот реагент почти не имеет побочных эффектов. Обучение и исследования стали лучшими развлечениями в нашей империи!"
+ allow_AAR_DEC_nzt48:0 "§HОткрывает планетарный указ:§! РЭО-48"
+ describe_AAR_DEC_nzt48:3 "§EЭто планетарный указ, который длится ровно §Y100§! лет и увеличивает £pop §Y$MOD_POP_HAPPINESS$§! поселений, увеличивает прирост §Yисследований§! поселениями и снижает §YПривлекательность руководящих принципов§!.§!"
+ AAR_DEC_nzt48:0 "РЭО-48"
+ AAR_DEC_nzt48_desc:0 "Местное правительство начало распылять РЭО-48 в огромных масштабах. Планета окутана сильной академической атмосферой."
+ AAR_mod_plnt_nzt48:0 "$AAR_DEC_nzt48$"
+ AAR_mod_plnt_nzt48_desc:0 "$AAR_DEC_nzt48_desc$"
+ 
+# Techs
+
+ tech_world_shaper:0 "Восстановление бесплодных миров"
+ tech_world_shaper_desc:1 "Мы можем терраформировать бесплодные миры почти что в любые биомы, даже в такие биомы - где возможна идеальная приспособленность для любой жизни!\n\n"
+ TECH_UNLOCK_TERRAFORMING_BARREN_TO_GAIA_CHANGE_TITLE:0 "§HОткрывает возможность：§! Восстановление бесплодных миров"
+ TECH_UNLOCK_TERRAFORMING_BARREN_TO_GAIA_CHANGE_DESC:0 "§HВосстановление климата§!\nПозволяет нам терраформировать бесплодные планеты в идеальные миры. Некоторые бесплодные миры получают эффект "Кандидат на терраформирование"."
+ 
+ tech_hive_worlds:0 "Восстановление бесплодных миров"
+ tech_hive_worlds_desc:1 "Даже бесплодная планета может стать частью улья.\n\n"
+
+ TECH_UNLOCK_TERRAFORMING_BARREN_TO_HIVE_CHANGE_TITLE:0 "§HОткрывает возможность：§! Трансформация бесплодных миров"
+ TECH_UNLOCK_TERRAFORMING_BARREN_TO_HIVE_CHANGE_DESC:0 "§HТрансформация климата§!§!\nПозволяет нам терраформировать бесплодные планеты в миры ульи. Некоторые бесплодные миры получают эффект "Кандидат на терраформирование"."
+ 
+ nnn_terraforming_candidate:0 "Кандидат на терраформирование"
+ nnn_terraforming_candidate_desc:0 "Когда £society  §H$tech_world_shaper$§! изучено,\nмы сможем терраформировать их сразу в идеальные миры."
+ 
+ nnn_terraforming_candidate2:0 "Кандидат на трансформацию"
+ nnn_terraforming_candidate2_desc:0 "Когда £society  §Htech_hive_worlds$§! изучено,\nмы сможем трансформировать их прямо в миры ульи."
+ 
+ tech_starbase_capacity:0 "Быстрая экспансия"
+ tech_starbase_capacity_desc:0 "Огромная поддержка логистической сети привела к большому ресурсному скачку, что позволило нам содержать больше звездных баз, за сравнительно небольшие траты. Скоро наступит период быстрой экспансии."
+
+# Misc
+
+ requires_ap_world_shaper:1 "$TRIGGER_FAIL$Требует перк вознесения §Y$ap_world_shaper$§!."
+ requires_ap_hive_worlds:1 "$TRIGGER_FAIL$Требует перк вознесения §Y$ap_hive_worlds$§!."
+ requires_ap_galactic_force_projection:1 "$TRIGGER_FAIL$Требует перк вознесения §Y$ap_galactic_force_projection$§!."
+ requires_ap_master_builders:0 "$TRIGGER_FAIL$Требует перк вознесения §Y$ap_master_builders$§!."
+ requires_ap_interstellar_dominion:0 "$TRIGGER_FAIL$Требует перк вознесения §Y$ap_interstellar_dominion$§! или §Y$ap_grasp_the_void$§!."
+ requires_ap_technological_ascendancy:0 "$TRIGGER_FAIL$Требует перк вознесения §Y$ap_technological_ascendancy$§!."
+ requires_ap_one_vision:0 "$TRIGGER_FAIL$Требует перк вознесения §Y$ap_one_vision$§!."
+ requires_ap_imperial_prerogative:0 "$TRIGGER_FAIL$Требует перк вознесения §Y$ap_imperial_prerogative$§!."
+ requires_ap_shared_destiny:1 "$TRIGGER_FAIL$Требует перк вознесения §Y$ap_shared_destiny$§!."
+ requires_tech_battleships:0 "$TRIGGER_FAIL$Требуется £engineering технология §Y$tech_battleships$§!."
+ requires_ap_mastery_of_nature:1 "$TRIGGER_FAIL$Требует перк вознесения §Y$ap_mastery_of_nature$§!."
+ requires_not_eap_mastery_of_nature:0 "$TRIGGER_FAIL$Наличие перка §Y$eap_mastery_of_nature$§! необязательно."
+ requires_not_eap_mastery_of_nature2:0 "$TRIGGER_FAIL$Наличие перка §Y$eap_mastery_of_nature2$§! необязательно."
+ requires_ap_defender_of_the_galaxy:1 "$TRIGGER_FAIL$Требует перк вознесения §Y$ap_defender_of_the_galaxy$§!."
+ requires_years_2:0 "$TRIGGER_FAIL$Требуется, что бы прошло больше §Y2250§! лет."
+ requires_no_crisis:0 "$TRIGGER_PASS$Требуется §YОтсутствие кризиса§!."
+ requires_ap_executive_vigor:1 "$TRIGGER_FAIL$Требует перк вознесения §Y$ap_executive_vigor$§!."
+ requires_ap_transcendent_learning:1 "$TRIGGER_FAIL$Требует перк вознесения §Y$ap_transcendent_learning$§!."
+ requires_tech_subdermal_stimulation_or_hive:0 "$TRIGGER_FAIL$Требуется £society технология   §Y$tech_subdermal_stimulation$§! или §Y$civic_tooltip_hive_mind$§!."
+ requires_not_ap_synthetic_evolution:1 "$TRIGGER_PASS$Требуется отсутствие перка вознесения §YСинтетической эволюции§!."
+ requires_ap_universal_transactions:1 "$TRIGGER_FAIL$Наличие перка вознесения §Y$ap_universal_transactions$§! необязательно."
+
+ mod_megastructures_cost_mult:0 "Стоимость строительства мегасооружения"
+ mod_megastructures_produces_mult:0 "Производство ресурсов в мегасооружениях"
+ 
+ # Evenets
+
+ adevent:0 "Саммит технологий будушего"
+ adevent_desc:0 "Мы верим в науку, и знает что наша наука нуждается в безостановочном развитии. Наука это постоянное изменение неизвестного в известное, что знаменует наше истинное величие и предназначение держать передовой фронт исследований.\n"
+ eata:2 "Саммит Трёх Лет был успешно проведён"
+ eata.tooltip:2 "Получены §Yочки исследований§! равные приросту за §G6§! месяцев."
+ eata2:2 "Я понял. Нет нужды сообщать мне об этом больше."
+ eata2.tooltip:2 "Получены §Yочки исследований§! равные приросту за §G6§! месяцев.\nДальнейших оповещений о этом событии не будет."
+ 
+ nnnethic_event.3.name:0 "Идеологическая пропаганда"
+ nnnethic_event.3.desc:1 "\nПосле десяти лет идеологической пропаганды люди постепенно приняли новую идеологию.\n"
+ 
+ nnnethic_event.4.name:0 "Идеологическая пропаганда завершена" 
+ nnnethic_event.4.desc:1 "\nСпустя десять лет идеологическая пропаганда окончена, согласно тестам - суммарный эффект можно считать удовлетворительным.\n"
+
+ nnnworld_shaper:0 "Восстановление бесплодных миров"
+ nnnworld_shaper_desc:1 "Наши технологии терраформирования планет становятся все более и более совершенными, и первое полностью автономное терраформирование §YБесплодного мира§! полностью подготовлено.\n"
+ world_shaper.a:0 "Отлично!"
+ world_shaper_tooltip:0 "Получена новая технология в древе исследований £society §H$tech_world_shaper$§!"
+  
+ nnnworld_shaper2:0 "Восстановление бесплодных миров"
+ nnnworld_shaper2_desc:1 "Наша способность разрастаться становится все более и более могучей, отныне - мы способны превратить бесплодную планету в мир улей.\n"
+ world_shaper2.a:0 "Отлично!"
+ world_shaper2_tooltip:0 "Получена новая технология в древе исследований £society §H$tech_hive_worlds$§!"
+
+
+
+ 
+ trade_protection:0 "$MOD_STARBASE_TRADE_PROTECTION_ADD$"
+ 
+ 
+ eapdefender:0 "Это конец?.." 
+ eapdefender_desc:0 "Наши эксперты продолжали изучать носитель с момента его обнаружения. Анализ данных поведал нам о возможном кризисе, что охватит всю нашу Галактику, а так же о содержании на носителе технологий и способов борьбы с этим кризисом."
+ defender1:2 "Похоже кризис начнут... существа из подпространства?" 
+ defender2:2 "Похоже что эти паттерны описывают межпространственный портал." 
+ defender3:2 "Загадочный сигнал? Что это значит?"
+ AAR_opt_defender_no:2 "Nothing seems to be happened..."
+ 
+ eapdefender2:0 "Ящик Пандоры"
+ eapdefender2_desc:0 "Мы совершили ужасную ошибку, нас обманули! Когда мы подключили этот носитель к специализированному терминалу, мы зарегестрировали сигнал, который было уже невозможно перехватить и цели которого мы не знали.. До одного момента. \nКатастрофа может прийти в любой момент и мы должны начать подготовку к ней немедленно.\nК счастью технологии из носителя сильно увеличили нашу ресурсную производительность.\n"
+ eapdefender2.a:0 "Что будет, то будет. Мы не боимся!" 
+ eapdefender2.a.tooltip:1 "§RКризис конца игры§! будет запущен через §R10§! лет.\nДобавлена реликвия: §OЯщик Пандоры§!"
+ 
+ eip:0 "Надзор за выполнением прерогатив"
+ eip_desc:0 "Контроль со стороны центрального правительства постоянно улучшается, а потому - контроль над всеми секторами империи только возрастает."
+ eip_event.a:0 "Все сектора находятся под контролем！"
+ eip_tooltip:1 "§Y$MOD_COUNTRY_ADMIN_CAP_ADD$§! увеличился на §G50§!."
+ 
+ # Relic
+ 
+ r_defender:0 "Ящик Пандоры"
+ r_defender_desc:0 "Шкатулка привлекла на нас ужасные бедствия, но она так же дала нам силы и возможности превозмочь их. Мы одновременно любим и ненавидим ее.."
+ AAR_tips_r_defender_effect:0 "\nIncrease the damage to all common empires/fallen empires/special crisis, and increase the research speed by 20%. \nRequires a lot of resource maintenance, $mod_country_produces_mult $§R-15%§!.\n$relic_activation_cooldown$：£time£ §Y3600§!"
+ AAR_tips_r_defender_activated:0 "\n$r_defender$ has been activated."
+ 
+ # Policy
+ 
+ policy_nnn_ethic_attraction:0 "Абсолютная уверенность"
+ policy_nnn_ethic_attraction_desc:0 "В период сложных времен центральное правительство доказало свою эффективность, и граждане без колебаний верят во все, что правительство им внушает."
+ government_ethic_attraction:0 "Поддержка текущих принципов"
+ government_ethic_attraction_desc:0 "Нет надобности указывать принципы нашим гражданам."
+ ethic_authoritarian_attraction:0 "Принятие авторитаризма."
+ ethic_authoritarian_attraction_desc:0 "Начать десятилетнюю пропаганду авторитаризма"
+ ethic_egalitarian_attraction:0 "Принятие эгалитаризма"
+ ethic_egalitarian_attraction_desc:0 "Начать десятилетнюю пропаганду эгалитаризма"
+ ethic_materialist_attraction:0 "Принятие материализма"
+ ethic_materialist_attraction_desc:0 "Начать десятилетнюю пропаганду материализма"
+ ethic_spiritualist_attraction:0 "Принятие спиритуализма"
+ ethic_spiritualist_attraction_desc:0 "Начать десятилетнюю пропаганду спиритуализма"
+ ethic_xenophobe_attraction:0 "Принятие ксенофобии"
+ ethic_xenophobe_attraction_desc:0 "Начать десятилетнюю пропаганду ксенофобии"
+ ethic_xenophile_attraction:0 "Принятие ксенофилии"
+ ethic_xenophile_attraction_desc:0 "Начать десятилетнюю пропаганду ксенофилии"
+ ethic_pacifist_attraction:0 "Принятие пацифизма"
+ ethic_pacifist_attraction_desc:0 "Начать десятилетнюю пропаганду пацифизма"
+ ethic_militarist_attraction:0 "Принятие милитаризма"
+ ethic_militarist_attraction_desc:0 "Начать десятилетнюю пропаганду милитаризма"
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

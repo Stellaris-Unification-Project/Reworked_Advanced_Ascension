@@ -1,0 +1,120 @@
+# 联合统治
+triggered_opinion_eap_shared_destiny = {
+	trigger = {
+		exists = overlord
+		overlord = { is_same_value = FROM }
+		FROM = {
+			has_ascension_perk = eap_shared_destiny
+		}
+	}
+
+	opinion = {
+		base = 400	# remember to update the tradition's tooltip
+	}
+}
+# 铁血联盟
+triggered_opinion_AAR_ForcedUnion = {
+	trigger = {
+		exists = overlord
+		overlord = { is_same_value = FROM }
+		FROM = {
+			has_ascension_perk = AAR_AP_ForcedUnion
+		}
+	}
+
+	opinion = {
+		base = 200	# remember to update the tradition's tooltip
+	}
+}
+
+
+# 资本渗透
+triggered_opinion_eap_universal_transactions = {
+	trigger = {
+		exists = overlord
+		overlord = { is_same_value = FROM }
+		FROM = {
+			has_ascension_perk = eap_universal_transactions 
+		}
+	}
+
+	opinion = {
+		base = 100	# remember to update the tradition's tooltip
+	}
+}
+
+
+
+
+# 恐怖族裔
+triggered_opinion_eap_defender_of_the_galaxy = {
+	trigger = {
+		FROM = {
+			has_ascension_perk = eap_defender_of_the_galaxy
+		}
+	}
+
+	opinion = {
+		base = -100	# remember to update the ascension perk's tooltip
+	}
+}
+
+triggered_opinion_eap_galactic_contender = {
+	trigger = {
+		OR = {
+			is_country_type = awakened_fallen_empire
+		}
+			
+		FROM = {
+			has_ascension_perk = eap_galactic_contender
+		}
+	}
+
+	opinion = {
+		base = -1000	# remember to update the ascension perk's tooltip
+	}
+}
+
+
+
+
+# 无可阻挡的舰队(威压主义)
+AAR_triggered_opinion_dominion_FEAR_powerful = {
+	trigger = {
+		FROM = { has_ascension_perk = AAR_AP_dominion_FEAR }
+		relative_power = { who = from	 category = fleet value < equivalent }
+	}
+
+	opinion = {
+		base = 20
+		modifier = {
+			add = 20
+			relative_power = { who = from	 category = fleet value < inferior }
+		}
+	}
+}
+# 令人不安的舰队(威压主义)
+AAR_triggered_opinion_dominion_FEAR_weak = {
+	trigger = {
+		FROM = { has_ascension_perk = AAR_AP_dominion_FEAR }
+		relative_power = { who = from	 category = fleet value > equivalent }
+	}
+
+	opinion = {
+		base = -20
+		modifier = {
+			add = -20
+			relative_power = { who = from	 category = fleet value > superior }
+		}
+	}
+}
+# 恐吓我们的殖民地(威压主义)
+AAR_opinion_dominion_FEAR_enemy = {
+	opinion = {
+		base = -2
+	}
+	accumulative = yes
+	decay = {
+		base = 2
+	}
+}

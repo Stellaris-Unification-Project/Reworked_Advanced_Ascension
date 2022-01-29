@@ -1,0 +1,180 @@
+namespace = AAR_core_evt
+
+#	AAR开局/AAR年检/AAR五年
+#	AAR进入轨道
+
+
+
+
+###	AAR开局
+#_<on_game_start>
+event = {
+	id = AAR_core_evt.0
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		every_country = { limit = { AAR_trgr_cntr_playable = yes }
+			## AAR飞升起源
+			if = { limit = { has_origin = AAR_origin_ascended }
+				country_event = { id = AAR_misc_evt.1 days = 1 }
+			}
+		}
+	}
+}
+
+
+
+
+###	AAR年检
+#_<on_yearly_pulse>
+#_list		AAR舰队参数DB/意志统一触发器	/共同辉煌年检/铁血联盟年检/资本渗透年检
+event = {
+	id = AAR_core_evt.1
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		every_country = { limit = { AAR_trgr_cntr_playable = yes }
+			## AAR舰队参数DB
+			if = {
+				limit = {
+					OR = {
+						has_ascension_perk = eap_galactic_force_projection
+						has_ascension_perk = AAR_fleet_armor
+						has_ascension_perk = AAR_fleet_shield
+					}
+				}
+				AAR_eft_cntr_FLEET_var_DB = yes
+			}
+			
+			## 意志统一触发器
+			if = { limit = { has_ascension_perk = eap_one_vision }
+				country_event = { id = nnnethic_event.1		 days = 1 random = 6 }
+			}
+			
+			## 共同辉煌年检
+			country_event = { id = AAR_evts_subject.1		 days = 1 random = 6 }
+			## 铁血联盟年检
+			country_event = { id = AAR_evts_subject.2		 days = 1 random = 6 }
+			## 资本渗透年检
+			country_event = { id = AAR_evts_subject.3		 days = 1 random = 6 }
+		}
+	} 
+}
+
+
+
+
+###	AAR五年
+#_<on_five_year_pulse>
+#_list	军备竞赛大建
+event = {
+	id = AAR_core_evt.2
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		every_country = { limit = { AAR_trgr_cntr_playable = yes }
+			## 军备竞赛大建
+			if = { limit = { has_ascension_perk = eap_galactic_force_projection }
+				country_event = { id = force_event.2 days = 1 random = 6 }
+			}
+		}
+	} 
+}
+
+
+
+
+
+
+
+
+###	AAR进入轨道
+#_<on_fleet_enter_orbit>
+#_list	威压主义
+fleet_event = {
+	id = AAR_core_evt.3
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		### 威压主义		每次舰队(szie>20)入轨殖民地都会刷新mod_factor,如果mod不存在则触发[威压循环_DB]
+		if = {
+			limit = {
+				fleet_size > 20
+				from = {# 有主殖民地
+					is_scope_type = planet
+					is_colony = yes
+					is_under_colonization = no
+					exists = owner
+				}
+				owner = { has_ascension_perk = AAR_AP_dominion_FEAR }	# AP存在
+			}
+
+			## 星球
+			from = {
+				## 己方	|test可触发|
+				if = {
+					limit = { owner = {# 星球之主
+						OR = {
+							is_same_value = root.owner	# fleet的owner
+							has_overlord = root.owner
+						}
+					} }
+					
+					set_variable = { which = AAR_var_plnt_FEAR_factor value = 0 }	# factor_init
+					every_fleet_in_orbit = { limit = { owner = { is_same_value = root.owner } }
+						prev = { change_variable = { which = AAR_var_plnt_FEAR_factor value = prev.trigger:fleet_size } }
+					}
+					divide_variable = { which = AAR_var_plnt_FEAR_factor value = 20 }
+
+					# 星球DB
+					if = { limit = { check_variable = { which = AAR_var_plnt_FEAR_factor value >= 1 } }
+						round_variable = AAR_var_plnt_FEAR_factor	#_四舍五入
+						# 最值限定
+						if = { limit = { check_variable = { which = AAR_var_plnt_FEAR_factor value > 10 } }
+							set_variable = { which = AAR_var_plnt_FEAR_factor value = 10 }
+						}
+						# MOD_DB
+						if = { limit = { NOR = { has_modifier = AAR_pm_dominion_FEAR_own			has_modifier = AAR_pm_dominion_FEAR_own_gestalt } }
+							planet_event = { id = AAR_domination_evt.1 }	# 威压循环DB_己方
+						}
+					}
+					else = { clear_variable = AAR_var_plnt_FEAR_factor }	# 自我清理
+				}
+				## 敌方
+				else_if = { limit = { owner = { is_hostile = root.owner } }
+					set_variable = { which = AAR_var_plnt_FEAR_factor value = 0 }	# factor_init
+					every_fleet_in_orbit = { limit = { owner = { is_same_value = root.owner } }
+						prev = { change_variable = { which = AAR_var_plnt_FEAR_factor value = prev.trigger:fleet_size } }
+					}
+					divide_variable = { which = AAR_var_plnt_FEAR_factor value = 20 }
+
+					# 星球DB
+					if = { limit = { check_variable = { which = AAR_var_plnt_FEAR_factor value >= 1 } }
+						round_variable = AAR_var_plnt_FEAR_factor	#_四舍五入
+						# 最值限定
+						if = { limit = { check_variable = { which = AAR_var_plnt_FEAR_factor value > 10 } }
+							set_variable = { which = AAR_var_plnt_FEAR_factor value = 10 }
+						}
+						# 敌意_DB
+						if = { limit = { NOT = { has_planet_flag = AAR_flg_plnt_FEAR_CD } }
+							set_timed_planet_flag = { flag = AAR_flg_plnt_FEAR_CD days = 187 }
+							while = { count = AAR_var_plnt_FEAR_factor
+								owner = { add_opinion_modifier = { modifier = AAR_opinion_dominion_FEAR_enemy who = root.owner } }
+							}
+						}
+						# MOD_DB
+						if = { limit = { NOR = { has_modifier = AAR_pm_dominion_FEAR_enemy			has_modifier = AAR_pm_dominion_FEAR_enemy_gestalt } }
+							planet_event = { id = AAR_domination_evt.2 }	# 威压循环DB_敌人
+						}
+					}
+					else = { clear_variable = AAR_var_plnt_FEAR_factor }	# 自我清理
+				}
+			}
+		}
+	} 
+}
+

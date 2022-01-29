@@ -1,0 +1,83 @@
+namespace = AAR_domination_evt
+
+#	威压循环DB_己方/威压循环DB_敌人
+
+
+
+
+###	威压循环DB_己方
+#_<AAR进入轨道>
+#_list		
+planet_event = {
+	id = AAR_domination_evt.1
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		## 存在舰队
+		if = {
+			limit = { exists = owner
+				any_fleet_in_orbit = { fleet_size > 20			 owner = { has_ascension_perk = AAR_AP_dominion_FEAR } }
+			}
+			# 格式塔
+			if = { limit = { owner = { is_gestalt = yes } }
+				remove_modifier = AAR_pm_dominion_FEAR_own_gestalt
+				add_modifier = { modifier = AAR_pm_dominion_FEAR_own_gestalt		 days = 67 multiplier = AAR_var_plnt_FEAR_factor }
+			}
+			# 普通
+			else = {
+				remove_modifier = AAR_pm_dominion_FEAR_own
+				add_modifier = { modifier = AAR_pm_dominion_FEAR_own				 days = 67 multiplier = AAR_var_plnt_FEAR_factor }
+			}
+			
+			# 自循环
+			planet_event = { id = AAR_domination_evt.1			 days = 57 random = 7 }
+		}
+		## 无舰队
+		else = {
+			remove_modifier = AAR_pm_dominion_FEAR_own
+			remove_modifier = AAR_pm_dominion_FEAR_own_gestalt
+			clear_variable = AAR_var_plnt_FEAR_factor
+		}
+	} 
+}
+
+
+###	威压循环DB_敌人
+#_<AAR进入轨道>
+#_list		
+planet_event = {
+	id = AAR_domination_evt.2
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		## 存在舰队
+		if = {
+			limit = { exists = owner
+				any_fleet_in_orbit = { fleet_size > 20			 owner = { has_ascension_perk = AAR_AP_dominion_FEAR } }
+			}
+			# 格式塔
+			if = { limit = { owner = { is_gestalt = yes } }
+				remove_modifier = AAR_pm_dominion_FEAR_enemy_gestalt
+				add_modifier = { modifier = AAR_pm_dominion_FEAR_enemy_gestalt		 days = 67 multiplier = AAR_var_plnt_FEAR_factor }
+			}
+			# 普通
+			else = {
+				remove_modifier = AAR_pm_dominion_FEAR_enemy
+				add_modifier = { modifier = AAR_pm_dominion_FEAR_enemy				 days = 67 multiplier = AAR_var_plnt_FEAR_factor }
+			}
+			
+			# 自循环
+			planet_event = { id = AAR_domination_evt.1			 days = 57 random = 7 }
+		}
+		## 无舰队
+		else = {
+			remove_modifier = AAR_pm_dominion_FEAR_enemy
+			remove_modifier = AAR_pm_dominion_FEAR_enemy_gestalt
+			clear_variable = AAR_var_plnt_FEAR_factor
+		}
+	} 
+}
+
+

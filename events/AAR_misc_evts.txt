@@ -1,0 +1,36 @@
+namespace = AAR_misc_evt
+
+#	AAR飞升起源/
+
+
+
+
+###	AAR飞升起源
+#_<AAR开局>
+#_list		AAR舰队参数DB/意志统一触发器	/共同辉煌年检/铁血联盟年检/资本渗透年检
+country_event = {
+	id = AAR_misc_evt.1
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		# init
+		if = { limit = { NOT = { is_variable_set = AAR_var_cntr_origin_ascended } }
+			set_variable = { which = AAR_var_cntr_origin_ascended value = 0 }
+			add_modifier = { modifier = AAR_mod_cntr_origin_ascended days = -1 }
+		}
+		# 自循环
+		if = { limit = { check_variable = { which = AAR_var_cntr_origin_ascended value < 5 } }
+			add_resource = {
+				unity = 200
+			}
+			change_variable = { which = AAR_var_cntr_origin_ascended value = 1 }
+			country_event = { id = AAR_misc_evt.1	days = 360 }
+		}
+		else = {
+			clear_variable = AAR_var_cntr_origin_ascended
+		}
+	} 
+}
+
+
