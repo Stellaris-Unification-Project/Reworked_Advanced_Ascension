@@ -119,13 +119,13 @@ fleet_event = {
 				if = {
 					limit = { owner = {# 星球之主
 						OR = {
-							is_same_value = root.owner	# fleet的owner
+							is_same_empire = root.owner	# fleet的owner
 							has_overlord = root.owner
 						}
 					} }
 					
 					set_variable = { which = AAR_var_plnt_FEAR_factor value = 0 }	# factor_init
-					every_fleet_in_orbit = { limit = { owner = { is_same_value = root.owner } }
+					every_fleet_in_orbit = { limit = { is_owned_by = root.owner }
 						prev = { change_variable = { which = AAR_var_plnt_FEAR_factor value = prev.trigger:fleet_size } }
 					}
 					divide_variable = { which = AAR_var_plnt_FEAR_factor value = 20 }
@@ -147,7 +147,7 @@ fleet_event = {
 				## 敌方
 				else_if = { limit = { owner = { is_hostile = root.owner } }
 					set_variable = { which = AAR_var_plnt_FEAR_factor value = 0 }	# factor_init
-					every_fleet_in_orbit = { limit = { owner = { is_same_value = root.owner } }
+					every_fleet_in_orbit = { limit = { is_owned_by = root.owner }
 						prev = { change_variable = { which = AAR_var_plnt_FEAR_factor value = prev.trigger:fleet_size } }
 					}
 					divide_variable = { which = AAR_var_plnt_FEAR_factor value = 20 }

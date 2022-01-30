@@ -1,9 +1,9 @@
-#	½¢¶ÓAP/AP½äÐÄÓÀ´æ/APÐÇ¼Ê°ÔÈ¨/AP¼¼ÊõÆæµã/AP¹²Í¬»Ô»Í/APÌìÔÖÖ®Ö÷
+#	AP/AP/APÇ¼Ê°È¨/AP/APÍ¬Ô»/APÖ®
 
 
 
 
-### ×ÔÈ»ºÍÐ³
+### È»Ð³
 eap_mastery_of_nature = {	
 	on_enabled = {
 		custom_tooltip = "eap_mastery_of_nature_unlocks"
@@ -50,7 +50,7 @@ eap_mastery_of_nature = {
 		factor = 10
 	}
 }
-### Õ÷·þ×ÔÈ»
+### È»
 eap_mastery_of_nature2 = {	
 	on_enabled = {
 		custom_tooltip = "eap_mastery_of_nature2_unlocks"
@@ -106,7 +106,7 @@ eap_mastery_of_nature2 = {
 
 
 
-### ËÜÐÇ´óÊ¦
+### Ç´Ê¦
 eap_world_shaper = {
 	on_enabled = {
 		add_research_option = tech_world_shaper
@@ -127,10 +127,10 @@ eap_world_shaper = {
 	}
 	
 	potential = {
-		NOT = {
+		NOR = {
 			has_ascension_perk = eap_world_shaper
+			has_authority = auth_hive_mind
 		}
-		NOT = { has_authority = auth_hive_mind }
 		OR = {
 			NOT = { has_authority = auth_machine_intelligence }
 			has_valid_civic = civic_machine_servitor
@@ -142,7 +142,7 @@ eap_world_shaper = {
 		factor = 5
 	}
 }
-### ÎÞ¾¡·ä³²
+### Þ¾ä³²
 eap_hive_worlds = {
 	on_enabled = {
 		add_research_option = tech_hive_worlds
@@ -177,13 +177,13 @@ eap_hive_worlds = {
 
 
 
-###_[½¢¶ÓAP]
-## ¾ü±¸¾ºÈü
+###_[AP]
+## 
 eap_galactic_force_projection = {
 	on_enabled = {
 		custom_tooltip = "nnn_galactic_force_projection_desc"
 		hidden_effect = {
-			## AAR½¢¶Ó²ÎÊýDB
+			## AARÓ²DB
 			AAR_eft_cntr_FLEET_var_DB = yes
 		}
 	}
@@ -233,12 +233,12 @@ eap_galactic_force_projection = {
 	}
 }
 
-## ¸ÖÌú¾ÞÊÞ
+## 
 AAR_fleet_armor = {
 	on_enabled = {
 		custom_tooltip = "AAR_fleet_armor_tips"
 		hidden_effect = {
-			## AAR½¢¶Ó²ÎÊýDB
+			## AARÓ²DB
 			AAR_eft_cntr_FLEET_var_DB = yes
 		}
 	}
@@ -271,12 +271,12 @@ AAR_fleet_armor = {
 	}
 }
 
-## Î´À´Õ½½¢
+## Î´Õ½
 AAR_fleet_shield = {
 	on_enabled = {
 		custom_tooltip = "AAR_fleet_shield_tips"
 		hidden_effect = {
-			## AAR½¢¶Ó²ÎÊýDB
+			## AARÓ²DB
 			AAR_eft_cntr_FLEET_var_DB = yes
 		}
 	}
@@ -319,8 +319,8 @@ AAR_fleet_shield = {
 
 
 
-####_[AP½äÐÄÓÀ´æ]
-## µÐ¶Ôº£Óò
+####_[AP]
+## Ð¶Ôº
 AAR_AP_hostile_territory = {
 	possible = {
 		has_ascension_perk = ap_eternal_vigilance
@@ -352,7 +352,7 @@ AAR_AP_hostile_territory = {
 	}
 }
 
-## ³¬¼¶·ÀÏß
+## 
 AAR_AP_defence_line = {
 	possible = {
 		has_ascension_perk = ap_eternal_vigilance
@@ -391,7 +391,7 @@ AAR_AP_defence_line = {
 
 
 
-### ÔìÎïÖ®Éñ
+### Ö®
 eap_master_builders = {
 	possible = {
 		custom_tooltip = {
@@ -419,7 +419,7 @@ eap_master_builders = {
 
 
 
-### APÐÇ¼Ê°ÔÈ¨
+### APÇ¼Ê°È¨
 eap_interstellar_dominion = {
 	on_enabled = {
 		add_research_option = tech_starbase_capacity
@@ -455,7 +455,7 @@ eap_interstellar_dominion = {
 	}
 }
 
-# ÍþÑ¹Ö÷Òå
+# Ñ¹
 AAR_AP_dominion_FEAR = {
 	on_enabled = {
 		custom_tooltip = "AAR_tips_dominion_FEAR"
@@ -502,7 +502,7 @@ AAR_AP_dominion_FEAR = {
 
 
 
-### AP¼¼ÊõÆæµã
+### AP
 eap_technological_ascendancy = {
 	on_enabled = {
 		custom_tooltip = "deseap_technological_ascendancy_desc"
@@ -541,12 +541,12 @@ eap_technological_ascendancy = {
 
 
 
-### APÒâÖ¾Í³Ò»
+### APÖ¾Í³Ò»
 eap_one_vision = {
 	on_enabled = { 
 		custom_tooltip = "deseap_one_vision_desc"
 		hidden_effect = {
-			country_event = { id = nnnethic_event.1 }	# ÒâÖ¾Í³Ò»´¥·¢Æ÷
+			country_event = { id = nnnethic_event.1 }	# Ö¾Í³Ò»
 		}
 	}
 	modifier = {	
@@ -596,7 +596,7 @@ eap_one_vision = {
 
 
 
-### È¨Á¦Ö®áÛ
+### È¨Ö®
 eap_imperial_prerogative = {	
 	on_enabled = { 
 		custom_tooltip = "eip_desc"
@@ -626,12 +626,10 @@ eap_imperial_prerogative = {
 		}
 	}
 	potential = {
-		NOT = {
+		NOR = {
 			has_ascension_perk = eap_imperial_prerogative
 			has_ascension_perk = eap_imperial_prerogative_corp
-			has_ascension_perk = eap_imperial_prerogative_corp2 
-		}
-		NOT = { 
+			has_ascension_perk = eap_imperial_prerogative_corp2
 			has_authority = auth_corporate
 		}
 	}
@@ -644,7 +642,7 @@ eap_imperial_prerogative = {
 		run_ai_strategic_data = yes
 	}
 }
-#¼æÈÝËûÈËMOD
+#MOD
 eap_imperial_prerogative_corp = {	
 	on_enabled = { 
 		custom_tooltip = "eip_desc"
@@ -745,8 +743,8 @@ eap_imperial_prerogative_corp2 = {
 
 
 
-### AP¹²Í¬»Ô»Í
-# ÁªºÏÍ³ÖÎ
+### APÍ¬Ô»
+# Í³
 eap_shared_destiny = {
 	on_enabled = {
 		custom_tooltip = "deseap_shared_destiny_desc"
@@ -777,8 +775,6 @@ eap_shared_destiny = {
 			has_valid_civic = civic_inwards_perfection
 			has_valid_civic = civic_machine_terminator
 			has_authority = auth_corporate
-		}
-		NOT = {
 			has_ascension_perk = eap_shared_destiny
 		}
 	}
@@ -788,7 +784,7 @@ eap_shared_destiny = {
 	}
 }
 
-# ÌúÑªÁªÃË
+# Ñª
 AAR_AP_ForcedUnion = {
 	on_enabled = {
 		custom_tooltip = "AAR_tips_ForcedUnion"
@@ -817,8 +813,6 @@ AAR_AP_ForcedUnion = {
 			has_valid_civic = civic_inwards_perfection
 			has_valid_civic = civic_machine_terminator
 			has_authority = auth_corporate
-		}
-		NOT = {
 			has_ascension_perk = AAR_AP_ForcedUnion
 		}
 	}
@@ -831,7 +825,7 @@ AAR_AP_ForcedUnion = {
 
 
 
-### APÌìÔÖÖ®Ö÷
+### APÖ®
 eap_defender_of_the_galaxy = {	
 	on_enabled = {
 		custom_tooltip = "eap_defender_of_the_galaxy_effect_opinion"
@@ -881,7 +875,7 @@ eap_defender_of_the_galaxy = {
 
 
 
-### ¼«Ð§Õþ¸®
+### Ð§
 eap_executive_vigor = {
 	modifier = {
 		country_edict_cap_add = 2
@@ -919,7 +913,7 @@ eap_executive_vigor = {
 
 
 
-### ÓÀÎÞÖ¹¾³
+### Ö¹
 eap_transcendent_learning = {
 	on_enabled = {
 		custom_tooltip = "allow_AAR_DEC_nzt48"
@@ -972,7 +966,7 @@ eap_transcendent_learning = {
 
 
 
-### ×Ê±¾ÉøÍ¸
+### Ê±Í¸
 eap_universal_transactions = {
 	on_enabled = {
 		custom_tooltip = "describe_universal_transactions_desc"
